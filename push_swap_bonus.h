@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 00:11:15 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/26 17:36:10 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/26 18:26:22 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	three_sort_bonus(t_stack **a);
 void	pair_nodes_n_costs_bonus(t_stack **stack_a, t_stack **stack_b);
 
 // ps_check_bonus.c
-ssize_t	check_sequence(t_stack *stack_a, t_stack *stack_b);
+int	check_moves(char **args);
+int	check_sequence(t_stack *stack_a, t_stack *stack_b);
 
 #endif

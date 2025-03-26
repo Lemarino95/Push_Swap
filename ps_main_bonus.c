@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 00:08:44 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/26 17:35:36 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/26 18:03:44 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(int ac, char *av[])
 	while (stack_b)
 		pair_nodes_n_costs_bonus(&stack_a, &stack_b);
 	lowest_to_top(&stack_a, 0);
+	check_moves(args);
 	check_sequence(stack_a, stack_b);
 	free_array(args);
 	free_stack(&stack_a);
