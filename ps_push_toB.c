@@ -6,12 +6,11 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 15:21:56 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/26 17:12:45 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/27 17:54:26 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "push_swap_bonus.h"
 
 // Pushes to stack B all nodes whith a number below the median, 
 //  except the biggest three (in case of a very small list)
@@ -42,19 +41,16 @@ static void	push_to_three(t_stack **stack_a, t_stack **stack_b, \
 }
 
 // Pushes to stack B all nodes but the biggest ones
-void	fill_stack_b(t_stack **stack_a, t_stack **stack_b, bool wflag)
+void	fill_stack_b(t_stack **stack_a, t_stack **stack_b)
 {
 	int	len_stack_a;
 
 	len_stack_a = ft_stacksize(*stack_a);
 	if (len_stack_a > 6)
-		push_lowest(stack_a, stack_b, len_stack_a, wflag);
+		push_lowest(stack_a, stack_b, len_stack_a, 1);
 	if (len_stack_a > 2)
 	{
-		push_to_three(stack_a, stack_b, len_stack_a, wflag);
-		if (wflag)
-			three_sort(stack_a);
-		else
-			three_sort_bonus(stack_a);
+		push_to_three(stack_a, stack_b, len_stack_a, 1);
+		three_sort(stack_a);
 	}
 }

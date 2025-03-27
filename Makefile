@@ -1,6 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I libft -I minilibx-linux -g
 NAME = push_swap
+NAME_BONUS = checker
 OBJ_DIR = obj
 
 SRC_MAIN = ps_swap.c ps_push.c ps_rotate.c ps_revrotate.c ps_liberate.c \
@@ -9,12 +10,11 @@ SRC_MAIN = ps_swap.c ps_push.c ps_rotate.c ps_revrotate.c ps_liberate.c \
 			ps_main.c \
 
 SRC_BONUS = ps_swap.c ps_push.c ps_rotate.c ps_revrotate.c ps_liberate.c \
-			ps_listutils.c ps_indexing.c ps_economy.c ps_economy2.c \
-			ps_three_sort.c ps_push_toB.c ps_parsing.c \
-			ps_three_sort_bonus.c ps_executemoves_bonus.c ps_checks_bonus.c\
-			ps_main_bonus.c \
+			ps_listutils.c ps_parsing.c \
+			ps_checker_bonus.c \
 
 OBJECTS_MAIN = $(SRC_MAIN:%.c=$(OBJ_DIR)/%.o)
+OBJECTS_BONUS = $(SRC_BONUS:%.c=$(OBJ_DIR)/%.o)#
 OBJECTS = $(OBJECTS_MAIN)
 
 LIBFT_DIR = libft
@@ -40,8 +40,10 @@ $(NAME): $(LIBFT) $(SRC_MAIN)
 	$(CC) $(CFLAGS) $(SRC_MAIN) $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)Object files created!$(NO_COLOR)"
 
-bonus: $(LIBFT)
-	$(CC) $(CFLAGS) $(SRC_BONUS) $(LIBFT) -o checker
+bonus: $(LIBFT) $(NAME_BONUS)
+
+$(NAME_BONUS): $(LIBFT) $(SRC_BONUS)
+	$(CC) $(CFLAGS) $(SRC_BONUS) $(LIBFT) -o $(NAME_BONUS)
 	@echo "$(CYAN)Checker compiled!$(NO_COLOR)"
 
 clean:
@@ -50,11 +52,11 @@ clean:
 
 fclean: clean
 	@echo "$(RED)Full Cleaning...$(NO_COLOR)"
-	@	rm -rf $(OBJ_DIR) $(NAME)
+	@	rm -rf $(OBJ_DIR) $(NAME) $(NAME_BONUS)
 	@	$(MAKE) -C $(LIBFT_DIR) fclean --quiet
 
 re: fclean all
 
 libft: $(LIBFT)
 
-.PHONY: all clean fclean re libft
+.PHONY: all clean fclean re libft bonus

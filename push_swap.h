@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:43:10 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/26 17:09:58 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:05:08 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void				pb(t_stack **stack_a, t_stack **stack_b, bool wflag);
 void				create_index(char **array, t_stack *root);
 
 // ps_push_toB.c.c
-void				fill_stack_b(t_stack **stack_a, t_stack **stack_b, bool wflag);
+void				fill_stack_b(t_stack **stack_a, t_stack **stack_b);
 
 // ps_three_sort.c
 void				three_sort(t_stack **stack_a);
