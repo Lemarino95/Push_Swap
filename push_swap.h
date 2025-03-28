@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:43:10 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/27 16:05:08 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/28 15:17:12 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,4 +105,6 @@ void				free_array(char **array);
 
 #endif
 
-// valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all
+// invalid read con " "
+// 01 != 1 
+

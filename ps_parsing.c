@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 19:46:35 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/26 17:08:51 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/28 15:40:18 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	check_order(char **args)
 	int	i;
 
 	i = 0;
-	while (args[i + 1])
+	while (args[i] && args[i + 1])
 	{
 		if (ft_atoi(args[i]) > ft_atoi(args[i + 1]))
 			return (1);
@@ -105,7 +105,9 @@ char	**get_arguments(int ac, char **av)
 		args = ft_split(av[1], ' ');
 	else if (ac > 2)
 		args = exclude_executable(ac, av);
-	if (ft_parsing(args) && search_dups(args))
+	if (!args)
+		return (NULL);
+	if (search_dups(args) && ft_parsing(args))
 		return (args);
 	else
 		return (free_array(args), NULL);
