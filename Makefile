@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I libft -I minilibx-linux -g
+CFLAGS = -Wall -Wextra -Werror -I libft -I minilibx-linux
 NAME = push_swap
 NAME_BONUS = checker
 OBJ_DIR = obj
