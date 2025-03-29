@@ -38,7 +38,7 @@ static int	search_dups(char **args)
 		while (args[j])
 		{
 			if (ft_atoi(args[i]) == ft_atoi(args[j]))
-				return (write(2, RED"Error\n"NO_COLOR, 11), 0);
+				return (ft_printf(RED"Error\n"NO_COLOR), 0);
 			j++;
 		}
 		i++;
@@ -59,13 +59,13 @@ static int	ft_parsing(char **args)
 			j++;
 		if (ft_atoi(args[i]) > INT_MAX || ft_atoi(args[i]) < INT_MIN \
 														|| args[i][0] == 0)
-			return (write(2, RED"Error\n"NO_COLOR, 11), 0);
+			return (ft_printf(RED"Error\n"NO_COLOR), 0);
 		else
 		{
 			while (args[i][j])
 			{
 				if (!(ft_isdigit(args[i][j])))
-					return (write(2, RED"Error\n"NO_COLOR, 11), 0);
+					return (ft_printf(RED"Error\n"NO_COLOR), 0);
 				j++;
 			}
 		}
