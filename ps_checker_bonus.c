@@ -37,7 +37,7 @@ static int	parse_moves(char *input)
 	else if (0 == ft_strncmp(input, "rrr\n", 3))
 		return (11);
 	else
-		return (write(2, RED"Error\n"NO_COLOR, 11), 0);
+		return (ft_printf(RED"Error\n"NO_COLOR), 0);
 }
 
 void	apply_input(int input_code, t_stack **clone_a, t_stack **clone_b)
@@ -77,10 +77,10 @@ int	check_sequence(t_stack *stack_a, t_stack *stack_b)
 	while (temp->next)
 	{
 		if (temp->nbr > temp->next->nbr)
-			return (write(1, YELLOW"KO\n"NO_COLOR, 11), 0);
+			return (ft_printf(YELLOW"KO\n",NO_COLOR, 0);
 		temp = temp->next;
 	}
-	return (write(1, GREEN"OK\n"NO_COLOR, 11), 1);
+	return (ft_printf(GREEN"OK\n"NO_COLOR, 1);
 }
 
 // Verifies the validity of the moves gives as imput before applying them
