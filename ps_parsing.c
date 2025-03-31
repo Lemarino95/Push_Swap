@@ -6,13 +6,13 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 19:46:35 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/28 15:40:18 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/31 17:36:50 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	check_order(char **args)
+static int	check_order(char **args, int bonus_flag)
 {
 	int	i;
 
@@ -23,7 +23,7 @@ static int	check_order(char **args)
 			return (1);
 		i++;
 	}
-	return (0);
+	return (0 + bonus_flag);
 }
 
 static int	search_dups(char **args)
@@ -46,7 +46,7 @@ static int	search_dups(char **args)
 	return (1);
 }
 
-static int	ft_parsing(char **args)
+static int	ft_parsing(char **args, int bonus_flag)
 {
 	int	i;
 	int	j;
@@ -71,7 +71,7 @@ static int	ft_parsing(char **args)
 		}
 		i++;
 	}
-	return (check_order(args));
+	return (check_order(args, bonus_flag));
 }
 
 static char	**exclude_executable(int ac, char **av)
@@ -96,7 +96,7 @@ static char	**exclude_executable(int ac, char **av)
 	return (array);
 }
 
-char	**get_arguments(int ac, char **av)
+char	**get_arguments(int ac, char **av, int bonus_flag)
 {
 	char	**args;
 
@@ -107,7 +107,7 @@ char	**get_arguments(int ac, char **av)
 		args = exclude_executable(ac, av);
 	if (!args)
 		return (NULL);
-	if (search_dups(args) && ft_parsing(args))
+	if (search_dups(args) && ft_parsing(args, bonus_flag))
 		return (args);
 	else
 		return (free_array(args), NULL);

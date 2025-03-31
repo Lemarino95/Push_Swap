@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 00:08:44 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/27 17:35:57 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/31 17:39:38 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int	check_sequence(t_stack *stack_a, t_stack *stack_b)
 	while (temp->next)
 	{
 		if (temp->nbr > temp->next->nbr)
-			return (ft_printf(YELLOW"KO\n",NO_COLOR, 0));
+			return (ft_printf(YELLOW"KO\n", NO_COLOR, 0));
 		temp = temp->next;
 	}
 	return (ft_printf(GREEN"OK\n"NO_COLOR, 1));
@@ -117,7 +117,7 @@ int	main(int ac, char *av[])
 
 	if (ac < 2)
 		return (0);
-	args = get_arguments(ac, av);
+	args = get_arguments(ac, av, 1);
 	if (!args)
 		return (0);
 	check_moves(args);

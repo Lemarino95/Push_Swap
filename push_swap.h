@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:43:10 by lemarino          #+#    #+#             */
-/*   Updated: 2025/03/28 15:17:12 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/31 17:37:07 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ typedef struct s_stack
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 // ps_parsing.c
-char				**get_arguments(int ac, char **av);
+char				**get_arguments(int ac, char **av, int bonus_flag);
 
 // ps_listutils.c
 t_stack				*ft_fill_stack(char **array);
