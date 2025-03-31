@@ -37,7 +37,7 @@ static int	parse_moves(char *input)
 	else if (0 == ft_strncmp(input, "rrr\n", 3))
 		return (11);
 	else
-		return (ft_printf(RED"Error\n"NO_COLOR), 0);
+		return (write(2, RED"Error\n", 11), 0);
 }
 
 void	apply_input(int input_code, t_stack **clone_a, t_stack **clone_b)
