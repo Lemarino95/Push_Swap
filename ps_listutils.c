@@ -73,7 +73,7 @@ void	lowest_to_top(t_stack **stack, bool wflag)
 		tmp = tmp->next;
 		i++;
 	}
-	if (i > ft_stacksize(*stack))
+	if (i > (ft_stacksize(*stack) / 2))
 	{
 		while ((*stack)->index != 0)
 			rra(stack, wflag);
