@@ -37,8 +37,6 @@ void	rra(t_stack **stack_a, bool wflag)
 		if (wflag)
 			ft_printf("rra\n");
 	}
-	else
-		ft_printf(RED"Could't reverse-rotate stack_a."NO_COLOR);
 }
 
 // (reverse rotate b): Shift down all elements of stack b by 1.
@@ -51,8 +49,6 @@ void	rrb(t_stack **stack_b, bool wflag)
 		if (wflag)
 			ft_printf("rrb\n");
 	}
-	else
-		ft_printf(RED"Could't reverse-rotate stack_b."NO_COLOR);
 }
 
 // rra and rrb at the same time
@@ -65,6 +61,4 @@ void	rrr(t_stack **stack_a, t_stack **stack_b, bool wflag)
 		if (wflag)
 			ft_printf("rrr\n");
 	}
-	else
-		ft_printf(RED"Could't reverse-rotate stacks."NO_COLOR);
 }
