@@ -104,7 +104,3 @@ void				free_stack(t_stack **root);
 void				free_array(char **array);
 
 #endif
-
-// invalid read con " "
-// 01 != 1 
-
