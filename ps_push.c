@@ -32,8 +32,6 @@ void	pa(t_stack **stack_b, t_stack **stack_a, bool wflag)
 		if (wflag)
 			ft_printf("pa\n");
 	}
-	else
-		ft_printf(RED"Missing stack_b\n"NO_COLOR);
 }
 
 // Take the first element at the top of a and put it at the top of b.
@@ -46,6 +44,4 @@ void	pb(t_stack **stack_a, t_stack **stack_b, bool wflag)
 		if (wflag)
 			ft_printf("pb\n");
 	}
-	else
-		ft_printf(RED"Missing stack_a\n"NO_COLOR);
 }
