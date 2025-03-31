@@ -77,10 +77,10 @@ int	check_sequence(t_stack *stack_a, t_stack *stack_b)
 	while (temp->next)
 	{
 		if (temp->nbr > temp->next->nbr)
-			return (ft_printf(YELLOW"KO\n",NO_COLOR, 0);
+			return (ft_printf(YELLOW"KO\n",NO_COLOR, 0));
 		temp = temp->next;
 	}
-	return (ft_printf(GREEN"OK\n"NO_COLOR, 1);
+	return (ft_printf(GREEN"OK\n"NO_COLOR, 1));
 }
 
 // Verifies the validity of the moves gives as imput before applying them
