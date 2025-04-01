@@ -1,5 +1,5 @@
 # Push_Swap
-A sorting algorithm that takes as an argument the [stack](https://www.youtube.com/watch?v=iq7puCxsgHQ)  A formatted as a list of integers.
+A sorting algorithm that takes as an argument the [stack]([https://www.youtube.com/watch?v=iq7puCxsgHQ](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)))  A formatted as a list of integers.
 
 • The program must display the shortest sequence of instructions needed to sort stack
   A with the smallest number at the top.
