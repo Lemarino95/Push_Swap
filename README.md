@@ -7,12 +7,15 @@ A sorting algorithm that takes as an argument the stack A formatted as a list of
 • The goal is to sort the stack in ascending order with the lowest possible number of operations.
 
 🧠Maximum amount of moves allowed with 5 numbers: 12,
+
 ⚡My average: 9;
 
 🧠Maximum amount of moves allowed with 100 numbers for max score : 700,
+
 ⚡My average: 575;
 
 🧠Maximum amount of moves allowed with \e[91m500 numbers for max score : 5500,
+
 ⚡My average: 4650;
 
 •MOVES ALLOWED:
