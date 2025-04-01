@@ -22,7 +22,7 @@ int	main(int ac, char *av[])
 	stack_b = NULL;
 	if (ac < 2)
 		return (0);
-	args = get_arguments(ac, av);
+	args = get_arguments(ac, av, 0);
 	if (!args)
 		return (0);
 	stack_a = ft_fill_stack(args);
