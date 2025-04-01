@@ -12,7 +12,7 @@ My average: 9;
 Maximum amount of moves allowed with 100 numbers for max score : 700,
 My average: 575;
 
-Maximum amount of moves allowed with 500 numbers for max score : 5500,
+Maximum amount of moves allowed with \e[91m500 numbers for max score : 5500,
 My average: 4650;
 
 •MOVES ALLOWED:
