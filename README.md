@@ -7,18 +7,18 @@ A sorting algorithm that takes as an argument the [stack](https://en.wikipedia.o
 • The goal is to sort the stack in ascending order with the lowest possible number of operations.
 
 
-🧠Maximum amount of moves allowed with 5 numbers: 12,
+#### 🧠Maximum amount of moves allowed with 5 numbers: 12,
 ⚡My average: 9;
 
-🧠Maximum amount of moves allowed with 100 numbers for max score : 700,
+#### 🧠Maximum amount of moves allowed with 100 numbers for max score : 700,
 ⚡My average: 575;
 
-🧠Maximum amount of moves allowed with \e[91m500 numbers for max score : 5500,
+#### 🧠Maximum amount of moves allowed with \e[91m500 numbers for max score : 5500,
 ⚡My average: 4650;
 
 
 
-•MOVES ALLOWED:
+### •MOVES ALLOWED:
 sa (swap a): Swap the first 2 elements at the top of stack a.
     Do nothing if there is only one element or none.
 
