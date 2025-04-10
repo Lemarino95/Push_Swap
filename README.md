@@ -62,15 +62,17 @@ rrr : rra and rrb at the same time.
 ### Execution and checking
 #### On zsh:
 ~~~
+make
 chmod 777 checker_linux
 ./push_swap *list of numbers* | checker_linux *same list as before*
 ~~~
 or
 ~~~
+make
 make bonus
 ./push_swap *list of numbers* | checker *same list as before*
 ~~~
 #### On bash:
 ~~~
-ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
+ARG="list of numbers"; ./push_swap $ARG | ./checker $ARG
 ~~~
