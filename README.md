@@ -62,7 +62,7 @@ rrr : rra and rrb at the same time.
 ### Execution and checking
 ~~~
 make
-chmod 777 checker_linux
+chmod 644 checker_linux
 ./push_swap *list of numbers* | checker_linux *same list as before*
 ~~~
 or
