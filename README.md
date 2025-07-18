@@ -60,7 +60,6 @@ rrb (reverse rotate b): Shift down all elements of stack b by 1.
 rrr : rra and rrb at the same time.
 
 ### Execution and checking
-#### On zsh:
 ~~~
 make
 chmod 777 checker_linux
